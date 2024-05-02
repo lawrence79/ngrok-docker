@@ -1,0 +1,15 @@
+version: "2"
+authtoken: <YOUR_NGROK_TOKEN>
+connect_timeout: 30s
+console_ui: true
+console_ui_color: transparent
+dns_resolver_ips:
+  - 1.1.1.1
+  - 8.8.8.8
+heartbeat_interval: 1m
+heartbeat_tolerance: 5s
+tunnels:
+  vestwell-admin-api:
+    addr: <api-endpoint>:443
+    proto: http
+    inspect: false
